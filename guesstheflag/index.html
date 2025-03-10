@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Flag</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="world-map"></div>
+    
+    <div class="game-container">
+        <h1>Guess The Flag</h1>
+        
+        <div class="stats-container">
+            <div class="stat-pill" id="progress">Progress: </div>
+            <div class="stat-pill" id="score">Score: 0</div>
+        </div>
+        
+        <div class="flag-container">
+            <img id="flag-image" class="flag-image" src="" alt="Country flag">
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="answer-input" placeholder="Guess?">
+        </div>
+        
+        <button id="submit-btn">Submit Answer</button>
+        <button id="next-btn" style="display: none; margin-top: 10px;">Next Flag</button>
+        
+        <div id="feedback" class="feedback"></div>
+    </div>
+    
+</body>
+</html>
