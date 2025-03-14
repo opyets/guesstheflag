@@ -232,25 +232,6 @@ let score = 0;
 let questionNum = 1;
 let gameCountries = [];
 
-function shuffleArray(array) {
-  let shuffled = [];
-  
-  for (let i = 0; i < array.length; i++) {
-    shuffled.push(array[i]);
-  }
-
-  for (let i = 0; i < 50; i++) {
-    let pos1 = Math.floor(Math.random() * shuffled.length);
-    let pos2 = Math.floor(Math.random() * shuffled.length);
-    
-    let temp = shuffled[pos1];
-    shuffled[pos1] = shuffled[pos2];
-    shuffled[pos2] = temp;
-  }
-  
-  return shuffled;
-}
-
 function loadFlag(countryCode) {
   submitBtn.disabled = true;
   flagImage.src = "";
@@ -273,7 +254,7 @@ function loadFlag(countryCode) {
 }
 
 function startGame() {
-  gameCountries = shuffleArray(countries);
+  gameCountries = countries;
   
   questionNum = 1;
   score = 0;
